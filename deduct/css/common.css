@@ -45,7 +45,7 @@ input,textarea{
     outline:none;
 }
 .constraint{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     letter-spacing: -7px;
     font-size: 0;
@@ -129,4 +129,7 @@ input,textarea{
 }
 .width-100{
     width: 100%;
+}
+.pointer{
+    cursor: pointer
 }

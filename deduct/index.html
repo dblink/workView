@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>用户划扣页面</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
@@ -37,7 +38,7 @@
             <td class="width-20">中国银行</td>
             <td class="width-30">13379963168</td>
             <td>6220221966645122003011</td>
-            <td class="width-10 primary-bg mousedown color-white">添加</td>
+            <td class="width-10 primary-bg mousedown color-white pointer">添加</td>
         </tr>
     </table>
 </div>
@@ -46,10 +47,10 @@
 <script >
     $(function (e) {
         $('.mousedown').mouseenter(function () {
-            $(this).css('backgroundColor','#59de90');
+            $(this).css('background','#59de90');
         })
         .mousedown(function () {
-            $(this).css('backgroundColor','#149d4c');
+            $(this).css('background','#149d4c');
         })
         .mouseup(function () {
             $(this).css('backgroundColor','#13df6a');
