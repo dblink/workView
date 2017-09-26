@@ -1,0 +1,76 @@
+.cid{
+    width: 340px;
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 16px;
+    border: 1px solid #E4E4E4;
+}
+.button{
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.input-line{
+    width:380px;
+    height: 38px;
+    padding: 5px 10px;
+    border: 1px solid #E4E4E4;
+    color: #cccccc;
+    font-size: 16px;
+}
+.input-line:hover{
+    border: 1px solid #cccccc;
+    color: #999999;
+}
+.input-line:focus{
+    border: 1px solid #13df6a;
+    color: #666666;
+}
+.text-input{
+    font-size: 18px;
+}
+.table-type{
+    width: 100%;
+    /*border: 1px solid #cccccc;*/
+    font-size: 14px;
+    letter-spacing: normal;
+    text-align: center;
+    background: #666666;
+    color: #ffffff;
+}
+.table-type td{
+    padding: 15px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.tr-type-content{
+    width: 100%;
+    /*border: 1px solid #cccccc;*/
+    font-size: 14px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #666666;
+    background: #eeeeee;
+}
+.tr-type-content td:first-child{
+    border-left: 1px solid #ffffff;
+}
+.tr-type-content td{
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.table-type-content td{
+    padding: 20px;
+}
+.table-type-content tr{
+    background: #f8f8f8;
+}
+.table-type-content tr:nth-child(even){
+    background: #eeeeee;
+}
+.table-type-content tr:hover{
+    background: #eeeeee;
+}

@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0;}
+.constraint{
+    width: 90%;
+    margin: auto;
+    letter-spacing: -7px;
+    background: #999999;
+}
+.layer {
+    letter-spacing: normal;
+}
+.btn{
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    background: #13df6a;
+    border-bottom: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+.example{
+    margin: auto;
+    width: 80%;
+    display: block;
+    color: #f8f8f8;
+    background: #f75e6e;
+    text-align: center;
+    padding: 30px;
+}

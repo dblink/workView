@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/case.css">
+</head>
+<body>
+
+    <div class="title" >
+        Don't Stop!
+        <div class="drop-down" >
+            <ul>
+                <li>123</li>
+                <li>234</li>
+                <li>345</li>
+                <li>456</li>
+            </ul>
+        </div>
+    </div>
+    <div class="title">
+        Don't Stop!
+        <div class="drop-down" >
+            <ul>
+                <li>123</li>
+                <li>234</li>
+                <li>345</li>
+                <li>456</li>
+            </ul>
+        </div>
+    </div>
+    <div class="title" >
+        Don't Stop!
+        <div class="drop-down" >
+            <ul>
+                <li>123</li>
+                <li>234</li>
+                <li>345</li>
+                <li>456</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".drop-down").hide()
+    $(".title")
+        .mouseenter(
+        function () {
+            $(this).children().stop(false,true).slideDown()
+        }
+    )
+        .mouseleave(
+        function () {
+            $(this).children().stop(false,true).slideUp()
+        }
+    )
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户划扣页面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<div class="constraint offset-top-100px">
+    <div class="layer">
+        <form action="" class="form">
+            <div class="text-input title-color offset-bottom-20px">身份证号码</div>
+            <input type="text" name="" value="" class="input-line layer">
+            <div class="primary-bg button layer mousedown">
+                搜索
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="constraint offset-top-50px">
+    <div class="text-input layer width-50 title-color offset-bottom-20px">用户信息</div>
+    <div class="text-input layer width-50 text-right primary-color">添加用户信息+</div>
+    <table class="table-type" cellspacing="0" cellpadding="0" border="0">
+        <tr class="tr-type">
+            <td class="width-20">开户行</td>
+            <td class="width-30">手机号码</td>
+            <td>银行卡号码</td>
+            <td class="width-10" >+/-</td>
+        </tr>
+        <tr class="tr-type-content">
+            <td class="width-20">中国银行</td>
+            <td class="width-30">13379963168</td>
+            <td>6220221966645122003011</td>
+            <td class="width-10 primary-bg mousedown color-white">添加</td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<script >
+    $(function (e) {
+        $('.mousedown').mouseenter(function () {
+            $(this).css('backgroundColor','#59de90');
+        })
+        .mousedown(function () {
+            $(this).css('backgroundColor','#149d4c');
+        })
+        .mouseup(function () {
+            $(this).css('backgroundColor','#13df6a');
+        })
+        .mouseleave(function () {
+            $(this).css('backgroundColor','#13df6a');
+        })
+    })
+    
+</script>
+
+</html>

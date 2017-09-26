@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #f75e6e;
+    margin: auto;
+    text-align: center;
+    vertical-align: top;
+}
+.drop-down{
+    box-sizing: border-box;
+    width: 150px;
+    /*height: 300px;*/
+    border: 1px solid #eeeeee;
+}
+.drop-down ul{
+    width: 100%;
+}
+.drop-down li{
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    background: #ffffff;
+    color: #999999;
+    border-bottom: 1px solid #f8f8f8;
+    letter-spacing: normal;
+}
+.drop-down li:hover{
+    background: #f8f8f8;
+}

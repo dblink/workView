@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#Nav{
+    width: 200px;
+}
+.title{
+    background: #413c3e;
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 10px;
+    font-weight: bold;
+}
+#Nav ul li{
+    background: #6e6568;
+    color: #ffffff;
+    border-bottom:  1px solid #777777;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    position: relative;
+}
+#Nav ul li p{
+    text-indent: 10px;
+}
+#Nav ul li:hover{
+    background: #999395;
+    font-weight: 600;
+}
+#Nav ul li:hover .pic{
+    display: block;
+}
+.pic{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    z-index: 1;
+    display: none;
+}
