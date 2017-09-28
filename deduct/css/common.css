@@ -53,6 +53,7 @@ input,textarea{
 .layer{
     letter-spacing: normal;
     display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
 }
 .text-left{
@@ -99,6 +100,9 @@ input,textarea{
 }
 .offset-bottom-100px{
     margin-bottom: 100px;
+}
+.width-5{
+    width: 5%;
 }
 .width-10{
     width: 10%;

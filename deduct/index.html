@@ -11,37 +11,63 @@
 </head>
 <body>
 
-<div class="constraint offset-top-100px">
-    <div class="layer">
-        <form action="" class="form">
-            <div class="text-input title-color offset-bottom-20px">身份证号码</div>
-            <input type="text" name="" value="" class="input-line layer">
-            <div class="primary-bg button layer mousedown">
-                搜索
-            </div>
-        </form>
+    <div class="constraint offset-top-100px">
+        <div class="layer">
+            <form action="" class="form">
+                <div class="text-input title-color offset-bottom-20px">身份证号码</div>
+                <input type="text" name="" value="" class="input-line layer" placeholder="请输入身份证号码">
+                <div class="primary-bg button layer mousedown pointer">
+                    搜索
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
 
-<div class="constraint offset-top-50px">
-    <div class="text-input layer width-50 title-color offset-bottom-20px">用户信息</div>
-    <div class="text-input layer width-50 text-right primary-color">添加用户信息+</div>
-    <table class="table-type" cellspacing="0" cellpadding="0" border="0">
-        <tr class="tr-type">
-            <td class="width-20">开户行</td>
-            <td class="width-30">手机号码</td>
-            <td>银行卡号码</td>
-            <td class="width-10" >+/-</td>
-        </tr>
-        <tr class="tr-type-content">
-            <td class="width-20">中国银行</td>
-            <td class="width-30">13379963168</td>
-            <td>6220221966645122003011</td>
-            <td class="width-10 primary-bg mousedown color-white pointer">添加</td>
-        </tr>
-    </table>
-</div>
+    <div class="constraint offset-top-50px">
+        <div class="text-input layer width-50 title-color offset-bottom-20px">用户信息</div>
+        <div class="text-input layer width-50 text-right primary-color pointer offset-bottom-20px" id="addTable">添加用户信息+</div>
+        <table class="table-type" id="table1" cellspacing="0" cellpadding="0" border="0">
+            <tr class="tr-type">
+                <td class="width-20">开户行</td>
+                <td class="width-30">手机号码</td>
+                <td>银行卡号码</td>
+                <td class="width-10" >+/-</td>
+            </tr>
+        </table>
+        <div id="nothing">该用户还没有任何信息，可点击“<i>添加用户信息+</i>”添加</div>
+    </div>
+
+    <div class="constraint offset-top-50px">
+        <div class="text-input layer width-50 title-color offset-bottom-20px">申请信息</div>
+        <div class="text-input layer width-50 text-right primary-color pointer offset-bottom-20px" id="addTable2">添加申请信息+</div>
+        <table class="table-type-application" id="table2" cellspacing="0" cellpadding="0" border="0">
+            <tr class="tr-type">
+                <td class="width-10">列表</td>
+                <td class="width-10">日期</td>
+                <td class="width-5">期数</td>
+                <td class="width-10">每期金额(元)</td>
+                <td class="width-10">总金额(元)</td>
+                <td class="width-10">开始时间</td>
+                <td class="width-5">周还/月还</td>
+            </tr>
+            <!--<tr class="tr-content-application">-->
+                <!--<td class="width-10"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-10"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-5"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-10"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-10"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-10"><input type="text" name="" value="" placeholder="" class="input-line-content layer"></td>-->
+                <!--<td class="width-5" style="padding: 0 !important;">-->
+                    <!--<select name="" id="" class="weekmonth">-->
+                        <!--<option value ="周还" style="height: 30px;">周还</option>-->
+                        <!--<option value ="月还" style="height: 30px;">月还</option>-->
+                    <!--</select>-->
+                <!--</td>-->
+            <!--</tr>-->
+        </table>
+        <div id="nothing2">该用户还没有任何信息，可点击“<i>添加申请信息+</i>”添加</div>
+    </div>
 </body>
 
 <script >
@@ -58,8 +84,48 @@
         .mouseleave(function () {
             $(this).css('backgroundColor','#13df6a');
         })
-    })
-    
+    });
+    $(function(){
+        var colorArr = ['#f75e6e','#13df6a'];
+        var textArr = ['删除','添加'];
+        var count = 0;
+        $('.changeColor').click(function() {
+            var $this = $(this);
+            $this.css('backgroundColor', colorArr[count%2]);
+            $this.text(textArr[count%2]);
+            count++;
+        });
+    });
+//
+    $(function () {
+        $("#addTable2").click(function () {
+            $('#nothing2').hide();
+            var tr = "<tr class=\"tr-content-application\">" +
+                "<td class=\"width-10\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-10\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入日期\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-5\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"输入期数\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-10\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入每期金额\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-10\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入总金额\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-10\" style=\"padding: 0 !important;\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入开始时间\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-5\" style=\"padding: 0 !important;\"><select name=\"\" id=\"\" class=\"weekmonth\">\n" +
+                "                        <option value =\"周还\" style=\"height: 30px;\">周还</option>\n" +
+                "                        <option value =\"月还\" style=\"height: 30px;\">月还</option>\n" +
+                "                    </select></td>";
+            $("#table2").append(tr);
+        })
+    });
+
+    $(function () {
+        $("#addTable").click(function () {
+            $('#nothing').hide();
+            var tr = "<tr class=\"tr-content-application\">" +
+                "<td class=\"width-20\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入开户行\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-30\"><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入手机号码\" class=\"input-line-content layer\"></td>" +
+                "<td><input type=\"text\" name=\"\" value=\"\" placeholder=\"请输入银行卡号码\" class=\"input-line-content layer\"></td>" +
+                "<td class=\"width-10 primary-bg changeColor color-white pointer\">添加</td></tr>";
+            $("#table1").append(tr);
+        })
+    });
 </script>
 
 </html>

@@ -13,6 +13,25 @@
     color: #ffffff;
     font-size: 14px;
 }
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999999;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999999;
+}
+input:-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999999;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999999;
+}
+.input-line-content{
+    width: 100%;
+    border: none;
+    color: #666666;
+    text-align: center;
+    font-size: 16px;
+}
 .input-line{
     width:380px;
     height: 38px;
@@ -46,22 +65,52 @@
     border-right: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
-.tr-type-content{
+.table-type-application{
+     width: 100%;
+     /*border: 1px solid #cccccc;*/
+     font-size: 14px;
+     letter-spacing: normal;
+     text-align: center;
+     background: #cccccc;
+     color: #333333;
+ }
+.table-type-application td{
+    padding: 15px;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    /*border-top: 1px solid #333333;*/
+}
+.table-type-application td:first-child{
+    border-left: 1px solid #333333;
+}
+.tr-type td{
+    border-top: 1px solid #333333;
+}
+.tr-content{
     width: 100%;
     /*border: 1px solid #cccccc;*/
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: normal;
     text-align: center;
     color: #666666;
     background: #eeeeee;
 }
-.tr-type-content td:first-child{
+.tr-content td:first-child{
     border-left: 1px solid #ffffff;
 }
-.tr-type-content td{
+.tr-content td{
     border-right: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
+.tr-content-application{
+     width: 100%;
+    border-top: none;
+     font-size: 16px;
+     letter-spacing: normal;
+     text-align: center;
+     color: #666666;
+     background: #f2f2f2;
+ }
 .table-type-content td{
     padding: 20px;
 }
@@ -73,4 +122,32 @@
 }
 .table-type-content tr:hover{
     background: #eeeeee;
+}
+#nothing{
+    font-size: 18px;
+    color: #999999;
+    text-align: center;
+    letter-spacing: normal;
+    padding: 15px;
+}
+#nothing i{
+    color: #13df6a;
+    font-style: normal;
+}
+#nothing2{
+    font-size: 18px;
+    color: #999999;
+    text-align: center;
+    letter-spacing: normal;
+    padding: 15px;
+}
+#nothing2 i{
+    color: #13df6a;
+    font-style: normal;
+}
+.weekmonth{
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: #f2f2f2;
 }
